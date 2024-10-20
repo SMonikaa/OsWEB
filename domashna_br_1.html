@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Order pizza</title>
+</head>
+
+<body>
+    <center>
+        <h1>Order pizza!</h1>
+
+        <form action="domashna_br_1_1.html">
+            <label for="size"><b>Select the pizza size:</b></label><br>
+            <input type="radio" name="size" value="Big">
+            <label for="Big">Big</label><br>
+            <input type="radio" name="size" value="Medium">
+            <label for="Medium">Medium</label><br>
+            <input type="radio" name="size" value="Small">
+            <label for="Small">Small</label>
+
+            <br>
+            <br>
+
+            <label for="crust"><b>Select the crust type:</b></label>
+            <br>
+            <select name="crust" id="crust">
+                <option value="Deep Dish">Deep Dish</option>
+            </select>
+            <br><br>
+
+            <label for="fillers"><b>Select the filler:</b></label>
+            <br>
+            <input type="checkbox" id="sausages" name="sausages" value="Sausages">
+            <label for="sausages"> Sausages</label><br>
+            <input type="checkbox" id="pepper" name="pepper" value="Pepper">
+            <label for="pepper"> Pepper</label><br>
+            <input type="checkbox" id="mushrooms" name="mushrooms" value="Mushrooms">
+            <label for="mushrooms"> Mushrooms</label><br><br>
+
+
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" name="name" size="20" required><br>
+            <label for="phone"><b>Phone:</b></label>
+            <input type="tel" id="phone" name="phone"><br>
+            <textarea id="message" name="message" rows="4" cols="50">Message:</textarea>
+            <br>
+            <br>
+
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+
+
+        </form>
+    </center>
+</body>
+
+</html>
