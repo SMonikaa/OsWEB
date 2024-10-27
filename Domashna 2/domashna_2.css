@@ -1,0 +1,40 @@
+body  {
+    background-image: url("pizza_cg2.webp");
+    background-color: #3e7d0bc4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-resolution: auto;
+  }
+.celo{
+  border: 8px double rgb(23, 5, 5);
+  padding: 10px;
+  background: rgb(243, 214, 129);
+  width: 420px;
+  text-align: center;
+  border-radius: 70px;
+  margin-bottom: 50px;
+  
+}
+select{
+  background-color: rgb(183, 186, 3);
+  text-align: center;
+}
+
+input[type = submit]{
+  background-color: #83bd3ce4;
+  border-radius: 30%;
+  border: none;
+}
+input[type = submit]:hover{
+  -ms-transform: scale(1.0); /* IE 9 */
+  -webkit-transform: scale(1.0); /* Safari 3-8 */
+  transform: scale(1.2); 
+}
+input[type = reset]{
+  background-color: #5b6155e4;
+  border-radius: 30%;
+  border: none;
+  color: white;
+}
+
+
