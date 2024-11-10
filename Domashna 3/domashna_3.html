@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the word</title>
+    <link rel="stylesheet" href="domashna_3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the word</h1>
+        <div id="word-container"></div>
+        <div id="input-container">
+            <input type="text" id="letter-input" maxlength="1" placeholder="Letter">
+            <button id="check-button">Check</button>
+        </div>
+        <div id="attempts">Attempts-left: <span id="attempts-left">5</span></div>
+        <button id="new-game" style="display: none;">New game</button>
+    </div>
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popup-message"></p>
+            <button id="popup-close">Close</button>
+        </div>
+    </div>
+
+    <script src="domasnha_3.js"></script>
+</body>
+</html>
