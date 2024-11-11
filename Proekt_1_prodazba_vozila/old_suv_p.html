@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Filter Sidebar with Car Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="modal.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="car_pick.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <a href="#privacy" class="privacy">Privacy</a>
+    <a href="#aboutus-section" class="aboutus">About us</a>
+    <a href="#contact-section" class="contact">Contact</a>
+    <a href="#default" class="logo">
+      <img src="logo.jpg" alt="AutoDrive" class="logo-image">
+    </a>
+    <a href="#test-drive" class="test-drive" onclick="openCarModal()">Test drive</a>
+    <a href="#signup" class="signup" onclick="openSignupModal()">Sign Up</a>
+    <a href="#login" class="login" onclick="openLoginModal()">
+      <i class="fas fa-user"></i> Login
+    </a>
+  </div>
+
+<!-- Car Modal -->
+<div id="carModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('carModal')">&times;</span>
+      <h2>Test Drive</h2>
+      <form>
+          <div class="form-group">
+              <label for="model">Car Model:</label>
+              <select id="model" name="model" required>
+                  <option value="audi">Audi</option>
+                  <option value="audie">Audi e-tron</option>
+                  <option value="fordanger">Ford Ranger</option>
+                  <option value="vw">VW Amarok</option>
+                  <option value="skoda">Skoda</option>
+                  <option value="seat">Seat</option>
+                  <option value="tiguan">VW Tiguan</option>
+                  <option value="golf">VW Golf</option>
+                  <option value="volvo">Volvo</option>
+              </select>
+          </div>
+
+          <div class="form-group">
+              <label for="year">Car Year:</label>
+              <select id="year" name="year" required>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+              </select>
+          </div>
+
+          <div class="form-group input-group">
+              <div>
+                  <label for="Nmae">Name:</label>
+                  <input type="text" id="color" name="color" placeholder="Enter you name" required>
+              </div>
+                  <div class="input-wrapper">
+                      <i class="fas fa-envelope"></i>
+                      <input type="email" id="signup-email" name="email" placeholder="Email" required>
+                  </div>
+          </div>
+          <div class="form-group">
+              <label for="type">New or Pre-owned:</label>
+              <select id="tyme" name="type" required>
+                  <option value="new">New</option>
+                  <option value="pre">Pre-owned</option>
+              </select>
+          </div>
+
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+</div>
+
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('loginModal')">&times;</span>
+      <h2>Login</h2>
+      <form>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+          
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+          
+          <button type="submit">Login</button>
+      </form>
+  </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('signupModal')">&times;</span>
+      <h2>Sign Up</h2>
+      <form>
+          <div class="input-wrapper">
+              <i class="fas fa-user"></i>
+              <input type="text" id="signup-username" name="username" placeholder="Username" required>
+          </div>
+          <div class="input-wrapper">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="signup-email" name="email" placeholder="Email" required>
+          </div>
+          <div class="input-wrapper">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="signup-password" name="password" placeholder="Password" required>
+          </div>
+          <div class="input-wrapper">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+          </div>
+          <button type="submit">Sign Up</button>
+      </form>
+  </div>
+</div>
+
+
+  <main>
+    <div class="container">
+      <!-- Sidebar Section -->
+      <div class="sidebar">
+        <h2>Car Filter</h2>
+
+        <!-- Make & Model Filter -->
+        <div class="filter-section">
+          <label for="make-model">Make & Model</label>
+          <select id="make-model" class="filter-select">
+            <option value="">Model</option>
+            <option value="model1">Audi</option>
+            <option value="model2">Audi e-tron</option>
+            <option value="fordanger">Ford Ranger</option>
+            <option value="vw">VW Amarok</option>
+            <option value="skoda">Skoda</option>
+            <option value="seat">Seat</option>
+            <option value="tiguan">VW Tiguan</option>
+            <option value="golf">VW Golf</option>
+            <option value="volvo">Volvo</option>
+            <option value="volvo">Mercedes</option>
+            
+          </select>
+        </div>
+
+        <!-- Body Type Filter -->
+        <div class="filter-section">
+          <label for="body-type">Body Type</label>
+          <select id="body-type" class="filter-select">
+            <option value="">Type</option>
+            <option value="suv">SUV</option>
+            <option value="sedan">Sedan</option>
+            <option value="coupe">Pickup</option>
+            <option value="coupe">Hatchback</option>
+          </select>
+        </div>
+
+        <div class="filter-section year-filter">
+            <label>Year</label>
+            <div class="histogram"></div> <!-- Histogram placeholder -->
+            <input type="range" id="year-slider" class="year-slider" min="1900" max="2024" step="1" value="2024" oninput="updateYearRange()">
+            <div class="year-range">
+              <span id="year-min">1900</span>
+              <span id="year-max">2024</span>
+            </div>
+            <div class="buttons">
+              <button class="button reset" onclick="resetYearFilter()">Reset</button>
+            </div>
+          </div>
+  
+  
+
+        <!-- Additional Options -->
+        <div class="additional-links">
+          <a href="#" class="save-search">Save Search</a>
+          <a href="#" class="advanced-options">Advanced Search</a>
+          <a href="#" class="sort-option">Recommended Sort</a>
+        </div>
+      </div>
+
+      <!-- Car Gallery Section -->
+      <div class="car-gallery">
+        <div class="car-item">
+          <a href="1_old_suv.html" class="vehicle-link">
+          <img src="1_suv.jpg" alt="Car 1">
+          <div class="description">
+            <h3>AUDI e-tron S quattro</h3>
+          </div>
+          </a>
+        </div>
+
+        <div class="car-item">
+          <a href="2_old_suv.html" class="vehicle-link">
+          <img src="7_suv.jpg" alt="Car 2">
+          <div class="description">
+            <h3>CUPRA Formentor 1.4 e-HYBRID pHEV Inicio DSG</h3>
+          </div>
+          </a>
+        </div>
+
+        <div class="car-item">
+          <a href="3_old_sedan.html" class="vehicle-link">
+          <img src="13_suv.jpg" alt="Car 3">
+          <div class="description">
+            <h3>VW Tiguan Allspace 2.0 TDI SCR R-Line 4Motion DSG</h3>
+          </div>
+        </a>
+        </div>
+
+        <div class="car-item">
+          <a href="4_old_suv.html" class="vehicle-link">
+          <img src="19_suv.jpg" alt="Car 4">
+          <div class="description">
+            <h3>VOLVO XC60 T8 eAWD PluginHybrid Polestar Geartronic</h3>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section" id = "aboutus-section">
+            <h4>About AutoDrive</h4>
+            <p>Your trusted premium auto dealership offering new and pre-owned vehicles with exceptional service since 2020.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#new">New Vehicles</a></li>
+                <li><a href="#pre-owned">Pre-Owned Vehicles</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" id  = "contact-section">
+            <h4>Contact</h4>
+            <ul class="contact-info">
+                <li><i class="fas fa-map-marker-alt"></i> 123 Auto Drive, Car City, ST 12345</li>
+                <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                <li><i class="fas fa-envelope"></i> info@autodrive.com</li>
+                <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 6:00 PM</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+        <div class="copyright">© 2024 AutoDrive. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

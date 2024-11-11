@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="new_hack.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+<div class="header">
+    <a href="#privacy" class="privacy">Privacy</a>
+    <a href="#aboutus-section" class="aboutus">About us</a>
+    <a href="#contact-section" class="contact">Contact</a>
+    <a href="#default" class="logo">
+        <img src="logo.jpg" alt="AutoDrive" class="logo-image">
+    </a>
+    <a href="#test-drive" class = "test-drive" onclick="openCarModal()">Test drive</a>
+    <a href="#signup" class="signup" onclick="openSignupModal()">Sign Up</a>
+    <a href="#login" class="login" onclick="openLoginModal()">
+        <i class="fas fa-user"></i> Login
+    </a>
+</div>
+
+<!-- Car Modal -->
+<div id="carModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('carModal')">&times;</span>
+        <h2>Test Drive</h2>
+        <form>
+            <div class="form-group">
+                <label for="model">Car Model:</label>
+                <select id="model" name="model" required>
+                    <option value="audi">Audi</option>
+                    <option value="audie">Audi e-tron</option>
+                    <option value="fordanger">Ford Ranger</option>
+                    <option value="vw">VW Amarok</option>
+                    <option value="skoda">Skoda</option>
+                    <option value="seat">Seat</option>
+                    <option value="tiguan">VW Tiguan</option>
+                    <option value="golf">VW Golf</option>
+                    <option value="volvo">Volvo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Car Year:</label>
+                <select id="year" name="year" required>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+
+            <div class="form-group input-group">
+                <div>
+                    <label for="Nmae">Name:</label>
+                    <input type="text" id="color" name="color" placeholder="Enter you name" required>
+                </div>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="signup-email" name="email" placeholder="Email" required>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label for="type">New or Pre-owned:</label>
+                <select id="tyme" name="type" required>
+                    <option value="new">New</option>
+                    <option value="pre">Pre-owned</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('signupModal')">&times;</span>
+        <h2>Sign Up</h2>
+        <form>
+            <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="signup-username" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="signup-email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="signup-password" name="password" placeholder="Password" required>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="sedan.jpg" alt="Hero Car" class="hero-image">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>NEW 2024</h1>
+                    <p>Experience the evolution of driving</p>
+                    <button class="discover-btn" onclick="discoverMore()">
+                        Discover More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Section -->
+    <section id="models" class="models-section">
+        <div class="container">
+            <h2 class="section-title">Latest Models</h2>
+            <div class="model-grid">
+                <div class="model-card">
+                    <img src="may_2023.jpg" alt="Model 1">
+                
+                </div>
+                <div class="model-card">
+                    <img src="may4.jpg" alt="Model 2">
+                </div>
+                <div class="model-card">
+                    <img src="may5.jpg" alt="Model 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inside body, replace the existing specs and gallery sections with: -->
+<section class="specs-gallery-wrapper">
+    <div class="container">
+        <div class="flex-container">
+            <!-- Specs Section -->
+            <section id="specs" class="specs-section">
+                <div class="specs-column">
+                    <h2>SPECS</h2>
+                    <div class="specs-list">
+                        <div class="spec-item" data-spec="acceleration">
+                            <p class="spec-label">ACCELERATION</p>
+                            <p class="spec-value">4.8s 0-60 mph</p>
+                        </div>
+                        <div class="spec-item" data-spec="speed">
+                            <p class="spec-label">TOP SPEED</p>
+                            <p class="spec-value">130 mph</p>
+                        </div>
+                        <div class="spec-item" data-spec="range">
+                            <p class="spec-label">RANGE</p>
+                            <p class="spec-value">280 miles</p>
+                        </div>
+                        <div class="spec-item" data-spec="power">
+                            <p class="spec-label">PEAK POWER</p>
+                            <p class="spec-value">538 hp</p>
+                        </div>
+                        <div class="spec-item" data-spec="weight">
+                            <p class="spec-label">WEIGHT</p>
+                            <p class="spec-value">5,236 lbs</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <div class="gallery-section">
+                <div class="main-image">
+                    <img src="vn5.jpg" alt="Car Detail" id="mainImage">
+                </div>
+                <div class="thumbnail-grid">
+                    <div class="image-card" onclick="updateMainImage(this)">
+                        <img src="vn1.jpg" alt="Interior Detail">
+                    </div>
+                    <div class="image-card" onclick="updateMainImage(this)">
+                        <img src="vn2.jpg" alt="Engine Detail">
+                    </div>
+                    <div class="image-card" onclick="updateMainImage(this)">
+                        <img src="vn3.jpg" alt="Rear Detail">
+                    </div>
+                    <div class="image-card" onclick="updateMainImage(this)">
+                        <img src="vn4.jpg" alt="Side Detail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section" id = "aboutus-section">
+            <h4>About AutoDrive</h4>
+            <p>Your trusted premium auto dealership offering new and pre-owned vehicles with exceptional service since 2020.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#new">New Vehicles</a></li>
+                <li><a href="#pre-owned">Pre-Owned Vehicles</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" id  = "contact-section">
+            <h4>Contact</h4>
+            <ul class="contact-info">
+                <li><i class="fas fa-map-marker-alt"></i> 123 Auto Drive, Car City, ST 12345</li>
+                <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                <li><i class="fas fa-envelope"></i> info@autodrive.com</li>
+                <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 6:00 PM</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+        <div class="copyright">© 2024 AutoDrive. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

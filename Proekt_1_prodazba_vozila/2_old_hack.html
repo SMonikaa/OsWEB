@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="old_sedan.css">
+    <link rel="stylesheet" href="modal.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details Gallery</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+<div class="header">
+    <a href="#privacy" class="privacy">Privacy</a>
+    <a href="#aboutus-section" class="aboutus">About us</a>
+    <a href="#default" class="logo">
+        <img src="logo.jpg" alt="AutoDrive" class="logo-image">
+    </a>
+    <a href="#test-drive" class = "test-drive" onclick="openCarModal()">Test drive</a>
+    <a href="#signup" class="signup" onclick="openSignupModal()">Sign Up</a>
+    <a href="#login" class="login" onclick="openLoginModal()">
+        <i class="fas fa-user"></i> Login
+    </a>
+    <a href="#contact-section" class="contact">Contact</a>
+</div>
+
+    <div class="car-details-gallery">
+        <!-- Gallery Section -->
+        <div class="gallery-section">
+          <div class="main-image">
+            <img 
+              src="7_hack.jpg" 
+              alt="Main car view"
+              class="main-img"
+            />
+          </div>
+          
+          <!-- Thumbnail Grid -->
+          <div class="thumbnail-grid">
+            <div class="thumbnail"><img src="8_hack.jpg" alt="Car view 1" class="thumbnail-img"></div>
+            <div class="thumbnail"><img src="9_hack.jpg" alt="Car view 2" class="thumbnail-img"></div>
+            <div class="thumbnail"><img src="10_hack.jpg" alt="Car view 3" class="thumbnail-img"></div>
+            <div class="thumbnail"><img src="11_hack.jpg" alt="Car view 4" class="thumbnail-img"></div>
+            <div class="thumbnail"><img src="12_hack.jpg" alt="Car view 5" class="thumbnail-img"></div>
+          </div>
+        </div>
+      
+        <!-- Specifications Section -->
+        <div class="specifications">
+          <h1 class="car-title">AUDI A3 Sportback 35 TFSI advanced</h1>
+      
+          <div class="spec-list">
+            <div class="spec-item"><i class="fas fa-calendar-alt spec-icon"></i><span class="spec-label">12.2023</span></div>
+            <div class="spec-item"><i class="fas fa-car spec-icon"></i><span class="spec-label">Hatchback</span></div>
+            <div class="spec-item"><i class="fas fa-ruler-combined spec-icon"></i><span class="spec-label">30'700 km</span></div>
+            <div class="spec-item"><i class="fas fa-bolt spec-icon"></i><span class="spec-label">Elektric / Plug-in HYBRID</span></div>
+            <div class="spec-item"><i class="fas fa-exchange-alt spec-icon"></i><span class="spec-label">Automatik</span></div>
+            <div class="spec-item"><i class="fas fa-cogs spec-icon"></i><span class="spec-label">150 PS (110 kW)</span></div>
+
+          </div>
+        </div>
+      </div>
+
+       <!-- Comment Card -->
+    <div class="comments-card">
+        <div class="comments-header">
+            <h3><i class="fas fa-comments"></i> Leave a Comment</h3>
+        </div>
+        <div class="comments-content">
+            <textarea placeholder="Share your thoughts about this vehicle..." class="comment-input"></textarea>
+            <div class="rating-section">
+                <span class="rating-label">Rating:</span>
+                <div class="rating">
+                    <div class="stars">
+                        <i class="fas fa-star" data-index="1"></i>
+                        <i class="fas fa-star" data-index="2"></i>
+                        <i class="fas fa-star" data-index="3"></i>
+                        <i class="fas fa-star" data-index="4"></i>
+                        <i class="fas fa-star" data-index="5"></i>
+                    </div>
+                    <div class="heart">
+                        <span class="rating-label">Like:</span>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <button class="submit-comment"><i class="fas fa-paper-plane"></i> Submit</button>
+        </div>
+    </div>
+    <!-- Car Modal -->
+<div id="carModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('carModal')">&times;</span>
+        <h2>Test Drive</h2>
+        <form>
+            <div class="form-group">
+                <label for="model">Car Model:</label>
+                <select id="model" name="model" required>
+                    <option value="audi">Audi</option>
+                    <option value="audie">Audi e-tron</option>
+                    <option value="fordanger">Ford Ranger</option>
+                    <option value="vw">VW Amarok</option>
+                    <option value="skoda">Skoda</option>
+                    <option value="seat">Seat</option>
+                    <option value="tiguan">VW Tiguan</option>
+                    <option value="golf">VW Golf</option>
+                    <option value="volvo">Volvo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Car Year:</label>
+                <select id="year" name="year" required>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+
+            <div class="form-group input-group">
+                <div>
+                    <label for="Nmae">Name:</label>
+                    <input type="text" id="color" name="color" placeholder="Enter you name" required>
+                </div>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="signup-email" name="email" placeholder="Email" required>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label for="type">New or Pre-owned:</label>
+                <select id="tyme" name="type" required>
+                    <option value="new">New</option>
+                    <option value="pre">Pre-owned</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+    <!-- Login Modal nesto ne raboti kako sto treba-->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('signupModal')">&times;</span>
+        <h2>Sign Up</h2>
+        <form>
+            <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="signup-username" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="signup-email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="signup-password" name="password" placeholder="Password" required>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section" id = "aboutus-section">
+            <h4>About AutoDrive</h4>
+            <p>Your trusted premium auto dealership offering new and pre-owned vehicles with exceptional service since 2020.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#new-vehicles">New Vehicles</a></li>
+                <li><a href="#pre-owned">Pre-Owned Vehicles</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" id  = "contact-section">
+            <h4>Contact</h4>
+            <ul class="contact-info">
+                <li><i class="fas fa-map-marker-alt"></i> 123 Auto Drive, Car City, ST 12345</li>
+                <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                <li><i class="fas fa-envelope"></i> info@autodrive.com</li>
+                <li><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 6:00 PM</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+        <div class="copyright">© 2024 AutoDrive. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+    
+    
+    
+
+      <script src="script_new.js"></script>
+</body>
+</html>
