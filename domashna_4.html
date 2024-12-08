@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    const value = $(this).val().toLowerCase();
+    $("#myTable tr").each(function() {
+      const columnText = $(this).find("td:nth-child(1)").text().toLowerCase();
+      $(this).toggle(columnText.includes(value));
+    });
+  });
+
+  $("#myInput1").on("keyup", function() {
+    const value = $(this).val().toLowerCase();
+    $("#myTable tr").each(function() {
+      const columnText = $(this).find("td:nth-child(2)").text().toLowerCase();
+      $(this).toggle(columnText.includes(value));
+    });
+  });
+
+  $("#myInput2").on("keyup", function() {
+    const value = $(this).val().toLowerCase();
+    $("#myTable tr").each(function() {
+      const columnText = $(this).find("td:nth-child(3)").text().toLowerCase();
+      $(this).toggle(columnText.includes(value));
+    });
+  });
+});
+</script>
+<style>
+table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+input {
+  margin: 5px 0;
+  padding: 8px;
+  width: calc(33% - 10px);
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+</style>
+</head>
+<body>
+
+<h2>Filterable Table</h2>
+<p>Type something in the input fields to search the table by first name, last name, or email:</p>  
+<input id="myInput" type="text" placeholder="Search name">
+<input id="myInput1" type="text" placeholder="Search surname">
+<input id="myInput2" type="text" placeholder="Search email">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>john@example.com</td>
+  </tr>
+  <tr>
+    <td>Mary</td>
+    <td>Moe</td>
+    <td>mary@mail.com</td>
+  </tr>
+  <tr>
+    <td>July</td>
+    <td>Dooley</td>
+    <td>july@greatstuff.com</td>
+  </tr>
+  <tr>
+    <td>Anja</td>
+    <td>Ravendale</td>
+    <td>a_r@test.com</td>
+  </tr>
+  </tbody>
+</table>
+
+<p>Note that the search works column by column, filtering only relevant data.</p>
+
+</body>
+</html>
