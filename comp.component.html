@@ -1,0 +1,34 @@
+<div *ngIf="vozac?.name != undefined" [ngClass]="klasi2()">
+    <div [style.text-decoration]="stilovi()">
+        {{indeks + "." + vozac?.name}}
+    </div>
+
+    <ng-template #noImg>
+        Ska slika
+    </ng-template>
+
+    <img width="300" 
+         *ngIf="vozac?.iconUrl; else noImg"
+         [src]="vozac?.iconUrl"
+         alt="this is a image">
+
+    <div>
+        {{vozac?.team}}
+    </div>
+
+    <div [ngSwitch]="vozac?.category">
+        <div>Driver category:</div>
+        <div *ngSwitchCase="'EXPERT'">EXPERT</div>
+        <div *ngSwitchCase="'LUNATIC'">LUNATIC</div>
+        <div *ngSwitchCase="'ASD'">ASD</div>
+        <div *ngSwitchDefault>No comment</div>
+    </div>
+
+    <button (click)="onDrvView()">
+        Klikni me
+    </button>
+
+    <div id="link-description" style="display:none">
+        Opens the driver's profile or Google link if unavailable.
+    </div>
+</div>

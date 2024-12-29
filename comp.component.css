@@ -1,0 +1,111 @@
+/* Card container */
+.karticka {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.karticka:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Name styling */
+.ime {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 20px;
+    padding: 12px 0;
+    border-bottom: 3px solid #edf2f7;
+    position: relative;
+}
+
+.ime::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #4299e1;
+    transition: width 0.3s ease;
+}
+
+.karticka:hover .ime::after {
+    width: 100px;
+}
+
+/* Image styling */
+.slika {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px 0;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+.slika:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Team styling */
+.tim {
+    font-size: 20px;
+    color: #4a5568;
+    margin: 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #edf2f7;
+}
+
+/* Button styling */
+.kopce {
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kopce:hover {
+    background-color: #2b6cb0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+/* Background classes */
+.begin {
+    background: #fff5f5;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.begin:hover {
+    background: #fed7d7;
+}
+
+.adv {
+    background: #ebf8ff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.adv:hover {
+    background: #bee3f8;
+}
