@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP</title>
+    <link rel="stylesheet" href="app.component.css">
+</head>
+<body>
 <div>
   <app-comp *ngFor="let drv of vozaci; index as i; first as prv;last as posleden;odd as nepar; even as par"
   [vozac]="drv" (click)="onAppView()"
@@ -8,3 +17,5 @@
   [indeks]="i+1"
 </app-comp>
 </div>
+</body>
+</html>

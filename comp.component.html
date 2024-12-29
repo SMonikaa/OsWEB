@@ -1,4 +1,4 @@
-<div *ngIf="vozac?.name != undefined" [ngClass]="klasi2()">
+<div *ngIf="vozac?.name != undefined" [ngClass]="klasi2()" class="karticka">
     <div [style.text-decoration]="stilovi()">
         {{indeks + "." + vozac?.name}}
     </div>
@@ -10,9 +10,10 @@
     <img width="300" 
          *ngIf="vozac?.iconUrl; else noImg"
          [src]="vozac?.iconUrl"
-         alt="this is a image">
+         alt="this is a image"
+         class="slika">
 
-    <div>
+    <div class="tim">
         {{vozac?.team}}
     </div>
 
@@ -24,7 +25,7 @@
         <div *ngSwitchDefault>No comment</div>
     </div>
 
-    <button (click)="onDrvView()">
+    <button (click)="onDrvView()" class="kopce">
         Klikni me
     </button>
 
