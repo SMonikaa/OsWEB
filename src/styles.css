@@ -1,0 +1,13 @@
+html, body{height: 100%;}
+body{margin: 0; font-family: 'Roboto', sans-serif;}
+
+.is-odd{color: rgb(202, 112, 15)}
+.is-even{color: rgb(63, 149, 11)}
+.is-first{color: rgb(27, 134, 205)}
+.is-last{color: rgb(116, 43, 183)}
+
+.is-back{background-color: blue}
+
+.undr{
+    text-emphasis: underline;
+}
