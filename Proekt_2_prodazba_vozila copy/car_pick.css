@@ -1,0 +1,170 @@
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px; /* Adjust this value to leave space for the fixed header */
+  }
+
+  /* Sidebar styles */
+  .sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+
+  .filter-section {
+    margin-bottom: 25px;
+  }
+
+  .filter-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+  }
+
+  .filter-select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    color: #333;
+  }
+
+  .year-filter {
+    position: relative;
+  }
+
+  .year-slider {
+    width: 100%;
+    margin: 10px 0;
+    accent-color: #007bff;
+  }
+
+  .year-range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #666;
+  }
+
+  .histogram {
+    height: 50px;
+    background: repeating-linear-gradient(
+      to right,
+      #d1e7ff,
+      #d1e7ff 5px,
+      #e2eaf1 5px,
+      #e2eaf1 10px
+    );
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .button.reset {
+    background-color: #6c757d;
+  }
+
+  .button.close {
+    background-color: #dc3545;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .additional-links a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9em;
+    transition: color 0.2s;
+  }
+
+  .additional-links a:hover {
+    color: #0056b3;
+  }
+
+  /* Car gallery styles with descriptions */
+  .car-gallery {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+
+  .car-item {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .car-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .car-item img {
+    width: 100%;
+    height: 180px; /* Set a fixed height */
+    object-fit: cover;
+    display: block;
+  }
+
+  .car-item .description {
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .car-item .description h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .car-item .description p {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  

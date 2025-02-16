@@ -1,0 +1,171 @@
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1001; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    margin: 0 0 20px;
+  }
+  
+  .modal-content label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .modal-content button:hover {
+    background-color: #444;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Enable scrolling if the modal content is large */
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 340px;
+    max-height: 80%;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header */
+  .modal-content h2 {
+    margin: 0 0 20px;
+    font-size: 22px;
+    color: #333;
+  }
+  
+  /* Input Field Wrapper */
+  .input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  /* Icon Styling */
+  .input-wrapper i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+  }
+  
+  /* Input Field Styling */
+  .modal-content input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Button Styling */
+  .modal-content button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-content button:hover {
+    background-color: #444;
+  }
+  
+  /* Close Button */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Main Content */
+  div[style] {
+    margin-top: 140px;
+    padding: 20px;
+  }
+  select, input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+}
+
+select:focus, input:focus {
+    border-color: #4f86e8;
+    outline: none;
+    background-color: #fff;
+}
